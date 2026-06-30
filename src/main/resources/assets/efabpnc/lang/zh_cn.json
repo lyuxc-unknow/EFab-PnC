@@ -1,7 +1,7 @@
 {
   "block.efabpnc.pneumatic_interface": "气动接口",
-  "requirement.efab.pneumatic_air": "需要 %s 压力，最低 %s bar",
-  "requirement.efab.pneumatic_heat": "需要 %s 热量，最低 %s K",
+  "requirement.efab.pneumatic_air": "需要 %s 空气，最低 %s bar",
+  "requirement.efab.pneumatic_heat": "需要 %s 温度，最低 %s K",
   "info.efabpnc.pressure": "压缩空气: %s/%s bar",
   "info.efabpnc.temperature": "温度: %s °C",
   "config.jade.plugin_efabpnc.fabpnc_block_component": "EFab PNC"

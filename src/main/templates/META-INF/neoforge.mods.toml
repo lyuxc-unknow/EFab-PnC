@@ -9,6 +9,9 @@ displayName="${mod_name}"
 authors="${mod_authors}"
 description='''${mod_description}'''
 
+[[mixins]]
+config="${mod_id}.mixins.json"
+
 [[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
@@ -23,7 +26,13 @@ description='''${mod_description}'''
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="pneumaticcraft"
-    type="optional"
+    type="required"
+    versionRange="[0.3.6,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="pneumaticcraft"
+    type="required"
     versionRange="[8.2,)"
     ordering="AFTER"
     side="BOTH"

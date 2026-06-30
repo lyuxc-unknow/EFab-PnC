@@ -1,13 +1,11 @@
 package cn.lyxc.efabpnc.integration.crafttweaker;
 
 
-import cn.lyxc.efabpnc.EFabPnC;
 import cn.lyxc.efabpnc.requirement.PneumaticAirRequirement;
 import cn.lyxc.efabpnc.requirement.PneumaticHeatRequirement;
 import com.blamejared.crafttweaker.api.annotation.ZenRegister;
 import mcjty.efab.api.recipe.EFabRequirementPhase;
 import mcjty.efab.compat.crafttweaker.EFabGridRecipeBuilder;
-import net.neoforged.fml.ModList;
 import org.openzen.zencode.java.ZenCodeType;
 
 import java.util.Locale;
@@ -27,9 +25,7 @@ public class EFabPnCRecipeBuilder {
 
     @ZenCodeType.Method
     public static EFabGridRecipeBuilder pneumaticAir(EFabGridRecipeBuilder builder, String phase, int air, float minPressure, boolean consume) {
-        requirePneumaticCraft();
-        builder.addRequirements(new PneumaticAirRequirement(parsePhase(phase), air, minPressure, consume));
-        return builder;
+        return builder.addRequirements(new PneumaticAirRequirement(parsePhase(phase), air, minPressure, consume));
     }
 
     @ZenCodeType.Method
@@ -49,9 +45,7 @@ public class EFabPnCRecipeBuilder {
 
     @ZenCodeType.Method
     public static EFabGridRecipeBuilder pneumaticHeat(EFabGridRecipeBuilder builder, String phase, double heat, double minTemperature, boolean consume) {
-        requirePneumaticCraft();
-        builder.addRequirements(new PneumaticHeatRequirement(parsePhase(phase), heat, minTemperature, consume));
-        return builder;
+        return builder.addRequirements(new PneumaticHeatRequirement(parsePhase(phase), heat, minTemperature, consume));
     }
 
     @ZenCodeType.Method
@@ -59,18 +53,11 @@ public class EFabPnCRecipeBuilder {
         return pneumaticHeat(builder, "tick", 0.0D, minTemperature, false);
     }
 
-
     private static EFabRequirementPhase parsePhase(String phase) {
         try {
             return EFabRequirementPhase.valueOf(phase.toUpperCase(Locale.ROOT));
         } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Unknown EFab requirement phase: " + phase, e);
-        }
-    }
-
-    private static void requirePneumaticCraft() {
-        if (!ModList.get().isLoaded(EFabPnC.MODID)) {
-            throw new IllegalStateException("PneumaticCraft is required for EFab pneumatic recipe requirements");
         }
     }
 }

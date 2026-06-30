@@ -24,8 +24,8 @@ public record PneumaticAirRequirement(
 ) implements EFabRecipeRequirement {
 
     private static final Codec<EFabRequirementPhase> PHASE_CODEC = Codec.STRING.xmap(
-            name -> EFabRequirementPhase.valueOf(name.toUpperCase(java.util.Locale.ROOT)),
-            phase -> phase.name().toLowerCase(java.util.Locale.ROOT)
+            name -> EFabRequirementPhase.valueOf(name.toUpperCase(Locale.ROOT)),
+            phase -> phase.name().toLowerCase(Locale.ROOT)
     );
 
     public static final MapCodec<PneumaticAirRequirement> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
