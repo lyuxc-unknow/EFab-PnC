@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "efab:block/grate",
+    "down": "efab:block/base",
+    "up": "efab:block/tech",
+    "east": "efab:block/base",
+    "west": "efab:block/base",
+    "north": "efab:block/grate",
+    "south": "efab:block/tank"
+  }
+}

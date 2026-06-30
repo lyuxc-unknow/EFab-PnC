@@ -1,0 +1,8 @@
+{
+  "block.efabpnc.pneumatic_interface": "Pneumatic Interface",
+  "requirement.efab.pneumatic_air": "%s air, min %s bar",
+  "requirement.efab.pneumatic_heat": "%s heat, min %s K",
+  "info.efabpnc.pressure": "Pressure: %s/%s bar",
+  "info.efabpnc.temperature": "Temperature: %s °C",
+  "config.jade.plugin_efabpnc.fabpnc_block_component": "EFab PNC"
+}
