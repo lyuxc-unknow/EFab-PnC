@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "particle": "efab:block/grate",
-    "down": "efab:block/base",
-    "up": "efab:block/tech",
-    "east": "efab:block/base",
-    "west": "efab:block/base",
-    "north": "efab:block/grate",
-    "south": "efab:block/tank"
+    "particle": "efabpnc:block/pneumatic_interface",
+    "down": "efabpnc:block/pneumatic_interface",
+    "up": "efabpnc:block/pneumatic_interface",
+    "east": "efabpnc:block/pneumatic_interface",
+    "west": "efabpnc:block/pneumatic_interface",
+    "north": "efabpnc:block/pneumatic_interface",
+    "south": "efabpnc:block/pneumatic_interface"
   }
 }
