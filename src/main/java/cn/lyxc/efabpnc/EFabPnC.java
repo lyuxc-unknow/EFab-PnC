@@ -34,8 +34,8 @@ public class EFabPnC {
     }
 
     private void addItemToCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == ModCreativeTabs.CREATIVE_MODE_TABS.getRegistry().get()) {
-            event.accept(ModItem.PNEUMATIC_INTERFACE_ITEM);
+        if (event.getTab() == ModCreativeTabs.MAIN.get()) {
+            event.accept(ModItem.PNEUMATIC_INTERFACE_ITEM.get());
         }
     }
 
