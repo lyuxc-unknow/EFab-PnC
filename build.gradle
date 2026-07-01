@@ -103,8 +103,10 @@ dependencies {
     implementation "curse.maven:jade-324717:${jade_version}"
     implementation "mcjty.theoneprobe:theoneprobe:${top_version}"
     implementation "com.blamejared.crafttweaker:CraftTweaker-neoforge-1.21.1:${crafttweaker_version}"
-    implementation 'mcjty.efab:EFab:0.3.6'
-    implementation "curse.maven:pneumaticcraft-repressurized-281849:6817362"
+    implementation "mcjty.efab:EFab:${efab_version}"
+    implementation "curse.maven:pneumaticcraft-repressurized-281849:${pnc_version}"
+    compileOnly "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
+    runtimeOnly "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
